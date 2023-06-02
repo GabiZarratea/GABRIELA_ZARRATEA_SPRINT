@@ -1,0 +1,377 @@
+header{
+    height: 15vh;
+}
+
+main{
+    min-height: 73vh;
+}
+
+footer{
+    height: 10vh;
+}
+
+.logo_{
+    margin-left: 1rem;
+    width: 120px;
+    height: 25px;
+}
+
+.btn-nav{
+    height: 25px;
+    padding: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 14px;
+    border-radius: 0.1rem;
+}
+
+#h1{
+    font-size: 60px !important; 
+    margin-left: -120px;
+    margin-bottom: 0.4rem;
+}
+
+#h1_2{
+    font-size: 60px !important; 
+    margin-left: -280px;
+    margin-bottom: 0.4rem;
+}
+
+#h1_3{
+    font-size: 60px !important; 
+    margin-left: -180px;
+    margin-bottom: 0.4rem;
+}
+
+#h1_4{
+    font-size: 60px !important; 
+    margin-left: -140px;
+    margin-bottom: 0.5rem;
+}
+
+#h1_5{
+    font-size: 60px !important; 
+    margin-left: -140px;
+    margin-bottom: 0.7rem;
+}
+
+.font{
+    font-size: 13px;
+}
+
+.search{
+    height: 20px;
+    width: 250px;
+}
+
+.btn-search{
+    width: 20px;
+    height: 20px;
+    margin-top: -5px;
+}
+
+.bi{
+    width: 14px !important;
+    height: 14px !important;
+    margin-top: -14px;
+    margin-left: -6px;
+}
+
+.btn-details{
+    width: 100px;
+    height: 25px;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.288) -8px -8px 8px;
+}
+
+.img_cards{
+    height: 200px;
+    object-fit: cover;
+}
+
+.icon-social{
+    width: 30px;
+}
+
+.form_contact{
+    width: 350px;
+}
+
+.event{
+    width: 450px;
+    height: 397px;
+}
+
+.card-details{
+    width: 400px;
+    height: 397px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.card{
+    margin: 25px !important;
+}
+
+/*HOME*/
+
+@media screen and (min-width:320px) and (max-width:768px){
+    header{
+        height: 28vh;
+    }
+    
+    main{
+        min-height: 65vh;
+    }
+    
+    footer{
+        height: 8vh;
+    }    
+    
+    .logo_{
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 200px;
+        height: 60px;
+    }
+
+    .phone-header{
+        flex-direction: column !important;
+        align-items: center;
+        margin: 0 !important;
+    }
+
+    .phone-header nav{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .phone-nav{
+        margin: 10px !important;
+        font-size: 14px;
+        height: 24px;
+    }
+
+    #h1{
+        font-size: 25px !important;
+        margin-left: -40px;
+    }
+
+    #h1_2{
+        margin-top: 5px;
+        font-size: 20px !important;
+        margin-left: -90px;
+    }
+
+    #h1_3{
+        margin-top: 5px;
+        font-size: 20px !important;
+        margin-left: -60px;
+    }
+    #h1_4{
+        margin-top: 5px;
+        font-size: 20px !important;
+        margin-left: -50px;
+    }
+
+    #h1_5{
+        margin-top: 5px;
+        font-size: 25px !important;
+        margin-left: -40px;
+    }
+
+    .phone-icon{
+        width: 15px;
+    }
+
+    .phone-search{
+        flex-direction: column-reverse !important;
+        justify-content: center !important;
+        align-items: center;
+    }
+    .font{
+        margin: 0 !important;
+        margin-right: 6px !important;
+        margin-left:2px !important;        
+        font-size: 9px;
+        margin-bottom: 11px !important;
+    }
+
+    .phone-category{
+        margin-top: 5px;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        margin-left:3px !important;
+    }
+
+    .check{
+        margin-bottom: 10px;
+        height: 12px;
+        flex-wrap: wrap;
+    }
+
+    .phone-content-card{
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .card{
+        margin-bottom: 15px;
+    }
+
+    .icon-social{
+        margin: 0 !important;
+        margin-right: 5px !important;
+    }
+
+    .phone-cohort{
+        margin: 0 !important;
+    }
+
+    .form_contact{
+        width: 250px;
+    }
+
+    .phone-submit{
+        margin-top: 10px;
+    }
+
+    table{
+        font-size: 14px;
+    }
+
+    .content-details{
+        flex-direction: column !important;
+    }
+
+    .event{
+        width: 300px;
+        height: 250px;
+    }
+
+    .card-details{
+        width: 300px;
+        height: 350px;
+        margin: 0 !important;
+        margin-top: 10px !important;
+        margin-bottom: 15px !important;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    header{
+        height: 25vh;
+    }
+    
+    main{
+        min-height: 65vh;
+    }
+    
+    footer{
+        height: 10vh;
+    }  
+    .logo_{
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 200px;
+        height: 50px;
+    }
+
+    .phone-header{
+        flex-direction: column !important;
+        align-items: center;
+        margin: 0 !important;
+    }
+
+    .phone-header nav{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .phone-nav{
+        margin: 0 !important;
+        font-size: 14px;
+        height: 24px;
+        margin-right: 20px !important;
+        margin-bottom: 10px !important;
+
+    }
+
+    #h1{
+        margin-left: -90px;
+    }
+
+    .phone-icon{
+        width: 15px;
+    }
+
+    .search{
+        height: 30px;
+        width: 400px;
+
+    }
+
+    .btn-search{
+        height: 30px;
+        width: 30px;
+    }
+    
+    .bi-search{
+        margin-top: 0 !important;
+        margin-bottom: 5px;
+        margin-left: -1.5px !important;
+    }
+
+    .phone-search{
+        flex-direction: column-reverse !important;
+        justify-content: center !important;
+        align-items: center;
+    }
+    .font{
+        margin: 0 !important;
+        margin-right: 29px !important;
+        margin-left:2px !important;        
+        font-size: 14px;
+    }
+
+    .phone-category{
+        margin-top: 15px;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        padding-left:55px !important;
+        padding-right: 55px !important;
+    }
+
+    .phone-content-card{
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+    }
+
+    .card{
+        margin-bottom: 15px;
+        width: 500px !important;
+        height: 500px !important;
+    }
+
+    .img_cards{
+        height: 300px;
+    }
+
+    .event{
+        width: 350px;
+        height: 350px;
+    }
+
+    .card-details{
+        width: 400px !important;
+        height: 350px !important;
+        margin-top: 100px !important;
+        margin-bottom: 100px !important;
+        font-size: 16px !important;
+    }
+}

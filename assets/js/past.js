@@ -77,7 +77,7 @@ const crearPlantilla = (objeto) => {
                 </div>
                 <div class="card-body d-flex justify-content-around">
                     <p>Price: $ ${objeto.price}</p>
-                    <a href="./assets/pages/details.html?id=${objeto._id}" class="btn btn-danger btn-details">Details</a> 
+                    <a href="../pages/details.html?id=${objeto._id}" class="btn btn-danger btn-details">Details</a> 
                 </div>
             </div>`
 }

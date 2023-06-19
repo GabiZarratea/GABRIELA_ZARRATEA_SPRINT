@@ -28,6 +28,11 @@ const imprimirCheckboxes = (array, lugar) => {
   lugar.innerHTML += template
 }
 
+let href = location.pathname.includes("index")
+    ? "./assets/pages/details.html"
+    : "../pages/details.html"
+
+
 const crearPlantilla = (objeto) => {
   return `<div class="card" style="width: 20rem; text-align: center;" >
                       <img src="${objeto.image}" class="img_cards rounded-top-2">
@@ -37,10 +42,9 @@ const crearPlantilla = (objeto) => {
                       </div>
                       <div class="card-body d-flex justify-content-around">
                           <p>Price: $ ${objeto.price}</p>
-                          <a href="../pages/details.html?id=${objeto._id}" class="btn btn-danger btn-details">Details</a> 
+                          <a href="${href}?id=${objeto._id}" class="btn btn-danger btn-details">Details</a> 
                       </div>
-                  </div>`
-}
+                  </div>`;
 
 const getSelectedCategories = () => {
   return Array.from(checkboxes)

@@ -15,7 +15,7 @@ let categoryListPas;
 let categoryListFut;
 
 // 2
-const filasTable2 = (objeto) => {
+const plantillaTable2 = (objeto) => {
   return `<tr>
               <td class="table-light">${objeto}</td>
               <td class="table-light" name="revenuesFut"></td>
@@ -23,44 +23,33 @@ const filasTable2 = (objeto) => {
           </tr>`;
 };
 
-const imprimirFilasTable2 = (array, lugar) => {
+const imprimirPlantillaTable2 = (array, lugar) => {
   let template = "";
 
   for (let category of array) {
-    template += filasTable2(category);
+    template += plantillaTable2(category);
   }
 
   lugar.innerHTML += template;
 };
 
-function crearFilasTable2(currentDate, data) {
-  imprimirFilasTable2(categoryListFut, table2);
+function crearPlantillaTable2(currentDate, data) {
 
-  for (let i = 0; i < revenuesFut.length; i++) {
+  imprimirPlantillaTable2(categoryListFut, table2);
+
+  for (let i = 0; i < categoryListFut.length; i++) {
     const category = categoryListFut[i];
-    const estimadoIngresosFuturos = calcularEstimadoIngresosFuturos(
-      category,
-      currentDate,
-      data
-    );
 
+    const estimadoIngresosFuturos = calcularEstimadoIngresosFuturos(category, currentDate, data);
+    const estimadoAsistencia = porcentajeEstimadoDeAsistencia(category, currentDate, data);
+    
     revenuesFut[i].textContent = estimadoIngresosFuturos;
-  }
-
-  for (let i = 0; i < porcentajeFut.length; i++) {
-    const category = categoryListFut[i];
-    const estimadoAsistencia = porcentajeEstimadoDeAsistencia(
-      category,
-      currentDate,
-      data
-    );
-
     porcentajeFut[i].textContent = estimadoAsistencia;
   }
 }
 
 // 3
-const filasTable3 = (objeto) => {
+const plantillaTabla3 = (objeto) => {
   return `<tr>
               <td class="table-light">${objeto}</td>
               <td class="table-light" name="revenuesPas"></td>
@@ -68,29 +57,26 @@ const filasTable3 = (objeto) => {
           </tr>`;
 };
 
-const imprimirFilasTable3 = (array, lugar) => {
+const imprimirPlantillaTabla3 = (array, lugar) => {
   let template = "";
 
   for (let category of array) {
-    template += filasTable3(category);
+    template += plantillaTabla3(category);
   }
 
   lugar.innerHTML += template;
 };
 
-const crearFilasTable3 = (currentDate, data) => {
-  imprimirFilasTable3(categoryListPas, table3);
+const crearPlantillaTabla3 = (currentDate, data) => {
+  imprimirPlantillaTabla3(categoryListPas, table3);
 
-  for (let i = 0; i < revenuesPas.length; i++) {
+  for (let i = 0; i < categoryListPas.length; i++) {
     const category = categoryListPas[i];
-    const ingresosPasados = calcularIngresosPasados(category, currentDate, data)
-    revenuesPas[i].textContent = ingresosPasados;
-  }
-
-  for (let i = 0; i < porcentajePas.length; i++) {
-    const category = categoryListPas[i];
+    
+    const ingresosPasados = calcularIngresosPasados(category, currentDate, data);
     const asistencia = porcentajeDeAsistencia(category, currentDate, data);
-
+    
+    revenuesPas[i].textContent = ingresosPasados;
     porcentajePas[i].textContent = asistencia;
   }
 };
@@ -243,8 +229,8 @@ fetch(url)
     eventoConMayorAsistencia(data);
     eventoConMenorAsistencia(data);
     eventoConMayorCapacidad(data);
-    crearFilasTable2(currentDate, data);
-    crearFilasTable3(currentDate, data);
+    crearPlantillaTable2(currentDate, data);
+    crearPlantillaTable3(currentDate, data);
   })
   .catch((error) => {
     console.log("Error al obtener los datos:", error);
